@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import './HelpBox.css';
 
 function HelpBox({ title, text }) {
