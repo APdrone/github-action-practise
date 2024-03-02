@@ -9,7 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "start": "node app.js",
-    "test": "npx playwright test"
+    "test": "vitest run"
   },
   "dependencies": {
     "prop-types": "^15.8.1",
