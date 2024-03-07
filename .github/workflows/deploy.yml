@@ -69,13 +69,13 @@ jobs:
     steps:
       - name: Get code
         uses: actions/checkout@v3
-      - name: Install action dependencies
-        run: |
-          echo "${{ github.workspace }}"
-          cd .github/actions/deploy-s3-javascript
-          npm ci
-          echo "${{ github.workspace }}"
-          cd ..
-          echo "${{ github.workspace }}"
+      # - name: Install action dependencies
+      #   run: |
+      #     echo "${{ github.workspace }}"
+      #     cd .github/actions/deploy-s3-javascript
+      #     npm ci
+      #     echo "${{ github.workspace }}"
+      #     cd ..
+      #     echo "${{ github.workspace }}"
       - name: Run custom action
         uses: ./.github/actions/deploy-s3-javascript
