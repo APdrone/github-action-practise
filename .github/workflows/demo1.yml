@@ -2,7 +2,7 @@ name: Deploy website
 on:
   push:
     branches:
-      - main
+      # - main
       - 4-job-artifacts-and-output
 jobs:
   test:
