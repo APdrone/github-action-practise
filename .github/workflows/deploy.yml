@@ -78,4 +78,4 @@ jobs:
           cd ..
           echo "${{ github.workspace }}"
       - name: Run custom action
-        uses: ./github/actions/deploy-s3-javascript
+        uses: ./.github/actions/deploy-s3-javascript
