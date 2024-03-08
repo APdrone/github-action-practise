@@ -16,6 +16,11 @@ function run() {
 
   // to log messafe to gihub action
 
+  // 3) getting website url
+  const websiteUrl = `http://${bucket}.s3-website-${bucketRegion}.amazonaws.com`;
+  core.notice(websiteUrl);
+  core.setOutput('website-url', websiteUrl);
+
   core.notice('Hello from my custom Javascript action');
 }
 
