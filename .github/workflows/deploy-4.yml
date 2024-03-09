@@ -2,7 +2,7 @@ name: Deployment
 on:
   push:
     branches:
-      - 8-2-custom-docker-action
+      - old-8-1-javascript-actions
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -57,7 +57,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Install action dependencies
         run: |
-          cd .github/actions/deploy-s3-docker
+          cd .github/actions/deploy-s3-javascript
           npm ci
       - name: Get build artifacts
         uses: actions/download-artifact@v3
@@ -68,7 +68,7 @@ jobs:
         run: ls
       - name: Deploy site
         id: deploy
-        uses: ./.github/actions/deploy-s3-docker
+        uses: ./.github/actions/deploy-s3-javascript
         env:
           AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
           AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
